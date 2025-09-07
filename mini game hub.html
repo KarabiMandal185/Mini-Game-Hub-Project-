@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Game Hub</title>
+    <link rel="stylesheet" href="mini game hub.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>🎮 Mini Game Hub</h1>
+        <nav>
+            <button onclick="showGame('ticTacToe')">Tic-Tac-Toe</button>
+            <button onclick="showGame('snake')">Snake</button>
+            <button onclick="showGame('memory')">Memory Game</button>
+        </nav>
+    </header>
+
+    <!-- Game Container -->
+    <main>
+        <!-- Tic-Tac-Toe -->
+        <section id="ticTacToe" class="game-section">
+            <h2>Tic-Tac-Toe</h2>
+            <div id="ticBoard" class="tic-board">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+            <p id="ticStatus"></p>
+            <p>High Score: <span id="ticScore">0</span></p>
+            <button onclick="resetTicTacToe()">Reset Game</button>
+        </section>
+
+        <!-- Snake -->
+        <section id="snake" class="game-section">
+            <h2>Snake</h2>
+            <canvas id="snakeCanvas" width="400" height="400"></canvas>
+            <p>Score: <span id="snakeScore">0</span></p>
+            <button onclick="startSnake()">Start Game</button>
+        </section>
+
+        <!-- Memory Game -->
+        <section id="memory" class="game-section">
+            <h2>Memory Game</h2>
+            <div id="memoryBoard" class="memory-board"></div>
+            <p>Moves: <span id="memoryMoves">0</span></p>
+            <p>High Score: <span id="memoryHighScore">0</span></p>
+            <button onclick="startMemory()">Restart Game</button>
+        </section>
+    </main>
+
+    <script src="mini game hub.js"></script>
+</body>
+</html>
